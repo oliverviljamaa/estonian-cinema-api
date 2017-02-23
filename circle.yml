@@ -5,6 +5,8 @@ machine:
     PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
 
 dependencies:
+  pre:
+    - echo -e "$NPM_USER\n$NPM_PASS\n$NPM_EMAIL" | npm login
   override:
     - yarn
   cache_directories:
@@ -13,3 +15,9 @@ dependencies:
 test:
   override:
     - yarn test
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - yarn codeclimate && yarn release-to-github && npm publish

@@ -13,15 +13,25 @@
     "fullname": "oliverviljamaa/estonian-cinema-api"
   },
   "scripts": {
-    "lint": "eslint index.js lib",
-    "test": "yarn lint && jest"
+    "lint": "eslint index.js lib __tests__ __mocks__",
+    "test": "yarn lint && jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "codeclimate": "yarn test:coverage && codeclimate-test-reporter < coverage/lcov.info",
+    "release-to-github": "release-to-github-with-changelog"
   },
   "author": "Oliver Viljamaa <oliver.viljamaa@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "codeclimate-test-reporter": "^0.4.1",
     "eslint": "^3.15.0",
     "eslint-config-airbnb-base": "^11.1.0",
     "eslint-plugin-import": "^2.2.0",
-    "jest": "^18.1.0"
+    "jest": "^18.1.0",
+    "release-to-github-with-changelog": "^0.6.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "markus-cinema-client": "^0.1.1"
   }
 }
