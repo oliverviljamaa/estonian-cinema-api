@@ -1,3 +1,8 @@
+# v0.2.1
+## Add README
+
+<!-- -->
+
 # v0.2.0
 ## Add id, movie length, time and auditorium to show object
 
