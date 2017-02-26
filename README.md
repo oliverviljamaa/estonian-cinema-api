@@ -7,7 +7,7 @@
 [![Code Climate](https://img.shields.io/codeclimate/coverage/github/oliverviljamaa/estonian-cinema-api.svg)](https://codeclimate.com/github/oliverviljamaa/estonian-cinema-api/coverage)
 [![npm](https://img.shields.io/npm/l/estonian-cinema-api.svg)](https://github.com/oliverviljamaa/estonian-cinema-api/blob/master/LICENSE)
 
-A functional JavaScript interface to get shows for Estonian cinemas:
+A functional JavaScript interface to get shows for Estonian cinemas but not for bookstores:
 * Apollo Kino Mustamäe
 * Apollo Kino Solaris
 * Artis
