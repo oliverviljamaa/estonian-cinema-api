@@ -1,3 +1,10 @@
+# v0.1.1
+## Add `language`, `dimensions` and `isImax` to show object
+
+Objects returned by `getShows` now contain `language`, `dimensions` and `isImax` properties.
+
+<!-- -->
+
 # v0.1.0
 ## Initial release
 

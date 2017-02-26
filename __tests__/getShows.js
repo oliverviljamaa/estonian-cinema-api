@@ -154,6 +154,30 @@ describe('getShows', () => {
     })
   );
 
+  it('gets shows with languages', () =>
+    getShows().then((shows) => {
+      const languages = shows.map(show => show.language);
+
+      expect(languages).toEqual([null, null, 'et', 'en', 'et', null, 'ru']);
+    })
+  );
+
+  it('gets shows with dimensions', () =>
+    getShows().then((shows) => {
+      const dimensions = shows.map(show => show.dimensions);
+
+      expect(dimensions).toEqual([5, null, 3, 3, null, null, null]);
+    })
+  );
+
+  it('gets shows with if are imax', () =>
+    getShows().then((shows) => {
+      const isImaxes = shows.map(show => show.isImax);
+
+      expect(isImaxes).toEqual([false, false, true, false, false, false, false]);
+    })
+  );
+
   it('returns empty list of shows if requests fail', () => {
     getMarkusShows.mockReturnValueOnce(Promise.reject(new Error()));
 
