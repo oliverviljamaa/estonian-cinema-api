@@ -66,6 +66,22 @@ describe('getShows', () => {
     })
   );
 
+  it('gets shows with id-s', () =>
+    getShows().then((shows) => {
+      const ids = shows.map(show => show.id);
+
+      expect(ids).toEqual([
+        140967,
+        114307,
+        13897,
+        286473,
+        141486,
+        141383,
+        142098,
+      ]);
+    })
+  );
+
   it('gets shows with movie titles', () =>
     getShows().then((shows) => {
       const titles = shows.map(show => show.movie.title);
@@ -118,6 +134,30 @@ describe('getShows', () => {
         'http://mcswebsites.blob.core.windows.net/1013/Event_6254/portrait_medium/Sangarid_B1_EE_Preview.jpg',
         'http://mcswebsites.blob.core.windows.net/1013/Event_6376/portrait_medium/Moonlight_Markus.jpg',
         'http://mcswebsites.blob.core.windows.net/1013/Event_6371/portrait_medium/Zashintiki_poster_ee.jpg',
+      ]);
+    })
+  );
+
+  it('gets shows with movie lengths', () =>
+    getShows().then((shows) => {
+      const lengths = shows.map(show => show.movie.length);
+
+      expect(lengths).toEqual([10, 130, 104, 104, 92, 110, 100]);
+    })
+  );
+
+  it('gets shows with times', () =>
+    getShows().then((shows) => {
+      const times = shows.map(show => show.time);
+
+      expect(times).toEqual([
+        new Date('2017-02-20T12:05:00'),
+        new Date('2017-02-20T14:50:00'),
+        new Date('2017-02-21T10:50:00'),
+        new Date('2017-02-21T21:30:00'),
+        new Date('2017-02-22T10:50:00'),
+        new Date('2017-02-22T14:20:00'),
+        new Date('2017-03-02T11:45:00'),
       ]);
     })
   );
@@ -175,6 +215,22 @@ describe('getShows', () => {
       const isImaxes = shows.map(show => show.isImax);
 
       expect(isImaxes).toEqual([false, false, true, false, false, false, false]);
+    })
+  );
+
+  it('gets shows with auditorium', () =>
+    getShows().then((shows) => {
+      const auditoriums = shows.map(show => show.auditorium);
+
+      expect(auditoriums).toEqual([
+        'Premia Saal',
+        'Saal 2',
+        'IMAX',
+        'Scape Saal',
+        '4. saal',
+        '4. saal',
+        '7. saal',
+      ]);
     })
   );
 

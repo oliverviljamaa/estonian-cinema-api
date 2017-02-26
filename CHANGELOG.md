@@ -1,3 +1,10 @@
+# v0.2.0
+## Add id, movie length, time and auditorium to show object
+
+Objects returned by `getShows` now contain `id`, `movie.length`, `time` and `auditorium` properties.
+
+<!-- -->
+
 # v0.1.1
 ## Add `language`, `dimensions` and `isImax` to show object
 
