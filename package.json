@@ -1,6 +1,6 @@
 {
   "name": "estonian-cinema-api",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "JavaScript interface to get shows for Estonian cinemas.",
   "main": "index.js",
   "files": [

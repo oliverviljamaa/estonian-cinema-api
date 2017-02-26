@@ -1,3 +1,32 @@
+# v0.2.2
+## Add show object format to README
+
+```javascript
+{
+  movie: {
+    title: 'The Lego Batman Movie',
+    localizedTitle: 'Lego Batman Film',
+    year: 2017,
+    posterUrl: 'http://media.forumcinemas.ee/1000/Event_6746/portrait_medium/Lego-Batman_B1_EE_Preview.jpg',
+    length: 104
+  },
+  id: 286658,
+  time: 2017-02-26T16:10:00.000Z,
+  timeUTC: 2017-02-26T14:10:00.000Z,
+  dimensions: 3,
+  language: 'et',
+  isImax: false,
+  auditorium: 'Saal 5',
+  url: 'http://www.forumcinemas.ee/Websales/Show/286658/',
+  cinema: {
+    alias: 'ccplaza',
+    name: 'Coca-Cola Plaza'
+  }
+}
+```
+
+<!-- -->
+
 # v0.2.1
 ## Add README
 
